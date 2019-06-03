@@ -1,3 +1,7 @@
+/*
+ä¸ºè¯¾æœ¬ä¾‹4.7çš„ç±» Circleï¼ŒRectangleï¼ŒGeometryè®¾è®¡æ„é€ å‡½æ•°ï¼Œä»¥ä¾¿é€šè¿‡å„ç§æ–¹å¼å»ºç«‹å¯¹è±¡ã€‚
+*/
+
 class Rectangle{
     double x,y,width,height;
     //Rectangle(){ }
@@ -72,9 +76,9 @@ class Geometry{
         double circleX=circle.getX();
         double rectX=rect.getX();
         if(rectX-rect.getWidth()>=circleX+circle.getRadius())
-            System.out.println("¾ØĞÎÔÚÔ²µÄÓÒ²à");
+            System.out.println("çŸ©å½¢åœ¨åœ†çš„å³ä¾§");
         if(rectX+rect.getWidth()<=circleX-circle.getRadius())
-            System.out.println("¾ØĞÎÔÚÔ²µÄ×ó²à");
+            System.out.println("çŸ©å½¢åœ¨åœ†çš„å·¦ä¾§");
     }
 }
 public class Example4_7 {
@@ -83,12 +87,12 @@ public class Example4_7 {
         Circle circle=new Circle(260,30,60);
         Geometry geometry;
         geometry=new Geometry(rect,circle);
-        System.out.print("¼¸ºÎÍ¼ĞÎÖĞÔ²ºÍ¾ØĞÎµÄÎ»ÖÃ¹ØÏµÊÇ£º");
+        System.out.print("å‡ ä½•å›¾å½¢ä¸­åœ†å’ŒçŸ©å½¢çš„ä½ç½®å…³ç³»æ˜¯ï¼š");
         geometry.showState();
-        System.out.println("¼¸ºÎÍ¼ĞÎÖØĞÂµ÷ÕûÁËÔ²ºÍ¾ØĞÎµÄÎ»ÖÃ.");
+        System.out.println("å‡ ä½•å›¾å½¢é‡æ–°è°ƒæ•´äº†åœ†å’ŒçŸ©å½¢çš„ä½ç½®.");
         geometry.setRectanglePosition(220,160);
         geometry.setCirclePosition(40,30);
-        System.out.print("µ÷Õûºó£¬¼¸ºÎÍ¼ĞÎÖĞÔ²ºÍ¾ØĞÎµÄÎ»ÖÃ¹ØÏµÊÇ:");
+        System.out.print("è°ƒæ•´åï¼Œå‡ ä½•å›¾å½¢ä¸­åœ†å’ŒçŸ©å½¢çš„ä½ç½®å…³ç³»æ˜¯:");
         geometry.showState();
     }
 }
