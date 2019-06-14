@@ -1,3 +1,15 @@
+/*
+å¡æ‹‰OKæ­Œæ‰‹æ‰“åˆ†ç¨‹åº
+
+è®¾è®¡ä¸€æ¥å£ï¼Œä¸ºå¡æ‹‰okæ­Œæ‰‹æ‰“åˆ†ã€‚è®¾è®¡ä¸¤ç§å®ç°ï¼Œå®ç°ä¸¤ç§æ‰“åˆ†æ–¹æ³•ï¼š
+
+(1) ä¹ä¸ªè¯„å§”ï¼Œä»¥ç™¾åˆ†åˆ¶æ‰“åˆ†ï¼Œå»æ‰ä¸€ä¸ªæœ€é«˜åˆ†ä¸ä¸€ä¸ªæœ€ä½åˆ†ã€‚è®¡ç®—å‡ºçš„å¹³å‡åˆ†ä¿ç•™ä¸€ä½å°æ•°ã€‚
+
+(2) ä¹ä¸ªè¯„å§”ï¼Œä»¥ç™¾åˆ†åˆ¶æ‰“åˆ†ï¼Œè®¡ç®—å‡ºçš„å¹³å‡åˆ†ä¿ç•™ä¸€ä½å°æ•°ã€‚
+
+(3) ä¹ä¸ªè¯„å§”ï¼Œåˆ†æ®µæ‰“åˆ†ï¼Œçº§åˆ«ä¸ºA+, A,B+,B,C+,C,D+,Då»æ‰ä¸€ä¸ªæœ€é«˜åˆ†ä¸ä¸€ä¸ªæœ€ä½åˆ†ã€‚æŠ˜ç®—å‡ºçš„å¹³å‡åˆ†ä¸ºä¸Šè¿°8ä¸ªçº§åˆ«ã€‚
+*/
+
 import java.util.Scanner;
 interface Gradeable{
     double f();
@@ -27,7 +39,7 @@ class Grade1 implements Gradeable{
         return num;
     }
     public void show(double x){
-        System.out.printf("·½·¨1´ò·Ö½á¹û£º%.1f\n",x);
+        System.out.printf("æ–¹æ³•1æ‰“åˆ†ç»“æœï¼š%.1f\n",x);
     }
 }
 class Grade2 implements Gradeable{
@@ -45,7 +57,7 @@ class Grade2 implements Gradeable{
         return num/9;
     }
     public void show(double x){
-        System.out.printf("·½·¨2´ò·Ö½á¹û£º%.1f\n",x);
+        System.out.printf("æ–¹æ³•2æ‰“åˆ†ç»“æœï¼š%.1f\n",x);
     }
 }
 class Grade3 implements Gradeable{
@@ -86,14 +98,14 @@ class Grade3 implements Gradeable{
     public void show(double x){
         int m=(int)x;
         switch(m){
-            case 1:System.out.println("·½·¨3´ò·Ö½á¹û£ºD");break;
-            case 2:System.out.println("·½·¨3´ò·Ö½á¹û£ºD+");break;
-            case 3:System.out.println("·½·¨3´ò·Ö½á¹û£ºC");break;
-            case 4:System.out.println("·½·¨3´ò·Ö½á¹û£ºC+");break;
-            case 5:System.out.println("·½·¨3´ò·Ö½á¹û£ºB");break;
-            case 6:System.out.println("·½·¨3´ò·Ö½á¹û£ºB+");break;
-            case 7:System.out.println("·½·¨3´ò·Ö½á¹û£ºA");break;
-            case 8:System.out.println("·½·¨3´ò·Ö½á¹û£ºA+");break;
+            case 1:System.out.println("æ–¹æ³•3æ‰“åˆ†ç»“æœï¼šD");break;
+            case 2:System.out.println("æ–¹æ³•3æ‰“åˆ†ç»“æœï¼šD+");break;
+            case 3:System.out.println("æ–¹æ³•3æ‰“åˆ†ç»“æœï¼šC");break;
+            case 4:System.out.println("æ–¹æ³•3æ‰“åˆ†ç»“æœï¼šC+");break;
+            case 5:System.out.println("æ–¹æ³•3æ‰“åˆ†ç»“æœï¼šB");break;
+            case 6:System.out.println("æ–¹æ³•3æ‰“åˆ†ç»“æœï¼šB+");break;
+            case 7:System.out.println("æ–¹æ³•3æ‰“åˆ†ç»“æœï¼šA");break;
+            case 8:System.out.println("æ–¹æ³•3æ‰“åˆ†ç»“æœï¼šA+");break;
         }
     }
 }
@@ -103,19 +115,19 @@ public class Text {
         double []a=new double[9];
         double []l=new double[9];
         String []w=new String[9];
-        System.out.print("·½·¨1²âÊÔÊı¾İ£º");
+        System.out.print("æ–¹æ³•1æµ‹è¯•æ•°æ®ï¼š");
         for(int i=0;i<9;i++)
             a[i]=in.nextDouble();
         Grade1 m=new Grade1(a);
         double e=m.f();
         m.show(e);
-        System.out.print("·½·¨2²âÊÔÊı¾İ£º");
+        System.out.print("æ–¹æ³•2æµ‹è¯•æ•°æ®ï¼š");
         for(int i=0;i<9;i++)
             l[i]=in.nextDouble();
         Grade2 x=new Grade2(l);
         double d=x.f();
         x.show(d);
-        System.out.print("·½·¨3²âÊÔÊı¾İ£º");
+        System.out.print("æ–¹æ³•3æµ‹è¯•æ•°æ®ï¼š");
         for(int i=0;i<9;i++)
             w[i]=in.next();
         Grade3 y=new Grade3(w);
