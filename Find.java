@@ -1,7 +1,9 @@
+/*
+编写一个“英汉-汉英”字典。输入英文，输出中文解释；输入中文，输出相关的英语单词。
+*/
 import java.util.Scanner;
 import java.io.*;
 import java.util.ArrayList;
-//import java.lang.System.exit;
 
 class txttest {
     public static String [] toArrayByRandomAccessFile(File file) {
@@ -10,7 +12,6 @@ class txttest {
         String []ww = new String [7987];
         try {
             isr = new InputStreamReader(new FileInputStream(file), "utf-8");
-            //RandomAccessFile fileR = new RandomAccessFile(file,"r");
             BufferedReader fileR = new BufferedReader(new FileReader(file));
             int i=0;
             while ((str = fileR.readLine())!= null) {
