@@ -1,3 +1,17 @@
+/*
+购物小票统计
+输入至少30份购物小票，信息如下：
+年、月、日、时间    购物金额
+例如：
+2019-5-17 10：37：37    28.5
+2019-3-21 20：20：20    100.8
+对上述小票金额按从星期一到星期天进行统计，得出结果如下：
+星期一  xxx元
+星期二  xxx元
+... ...
+星期日  xxx元
+*/
+
 import java.util.Scanner;
 import java.util.Calendar;
 import java.util.Date;
@@ -24,14 +38,14 @@ class Strr{
         return mon;
     }
 }
-public class ����СƱͳ��_�ַ������� {
+public class 购物小票统计_字符日期类 {
     public static void main(String args[])throws Exception{
         double []a=new double[7];
         Scanner input=new Scanner(System.in);
-        System.out.println("�����¼����");
+        System.out.println("输入记录数：");
         int n=input.nextInt();
         String x = input.nextLine();
-        System.out.println("����СƱ��Ϣ��");
+        System.out.println("输入小票信息：");
         for(int i=0;i<n;i++) {
             String w = input.nextLine();
             Strr r = new Strr(w);
@@ -46,7 +60,7 @@ public class ����СƱͳ��_�ַ������� {
             if(week==1) a[6]+=mon;
         }
         for(int i=0;i<7;i++){
-            System.out.println("����"+(i+1)+" "+a[i]+"Ԫ");
+            System.out.println("星期"+(i+1)+" "+a[i]+"元");
         }
     }
 }
